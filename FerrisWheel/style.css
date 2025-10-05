@@ -1,0 +1,101 @@
+        .wheel {
+              animation-name: wheel;
+              animation-duration: 10s;
+              animation-iteration-count: infinite;
+              animation-timing-function: linear;
+              position: absolute;
+              height: 55vw;
+              width: 55vw;
+              border: 2px solid black;
+              border-radius: 50%;
+              margin-left: 500px;
+              margin-top: 200px;
+              max-height: 500px;
+              max-width: 500px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+          }
+          .line {
+              transform-origin: 0% 0%;
+              background-color: black;
+              width: 50%;
+              position: absolute;
+              height: 2px;
+              left: 50%;
+              top: 50%;
+          }
+          .line:nth-of-type(2) {
+              transform: rotate(120deg);
+          }
+          .line:nth-of-type(3) {
+              transform: rotate(180deg);
+          }
+          .line:nth-of-type(4) {
+              transform: rotate(240deg);
+          }
+          .line:nth-of-type(5) {
+              transform: rotate(300deg);
+          }
+          .line:nth-of-type(6) {
+              transform: rotate(60deg);
+          }
+          .box {
+              animation: box 10s linear infinite;
+              transform-origin: 50% 0%;
+              background-color: red;
+              width: 20%;
+              height: 20%;
+              position: absolute;
+              border: 2px solid;
+          }
+          .box:nth-of-type(1) {
+              right: -8.5%;
+              top: 50%;
+          }
+          .box:nth-of-type(2) {
+              right: 17%;
+              top: 93.5%;
+          }
+          .box:nth-of-type(3) {
+              right: 67%;
+              top: 93.5%;
+          }
+          .box:nth-of-type(4) {
+              left: -8.5%;
+              top: 50%;
+          }
+          .box:nth-of-type(5) {
+              left:17%;
+              top: 7%;
+          }
+          .box:nth-of-type(6) {
+              right: 17%;
+              top: 7%;
+          }
+          @keyframes wheel {
+              0% {
+                  transform: rotate(0deg);
+              }
+              100% {
+                  transform: rotate(360deg);
+              }
+          }
+          @keyframes box {
+              0% {
+                  transform: rotate(0deg);
+                  background-color: yellow;
+              }
+              25% {
+                  background-color: yellow;
+              }
+              50% {
+                  background-color: purple;;
+              }
+              75% {
+                  background-color: yellow;
+              }
+              100% {
+                  transform: rotate(-360deg);
+              }
+          }
